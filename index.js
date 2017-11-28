@@ -1,9 +1,9 @@
 
 const { lstatSync, readdirSync, readFileSync, writeFileSync, unlinkSync } = require('fs');
 const { extname } = require('path');
-const {createLinesSummary, createDirectivesSummary} = require("./summary");
-const {parseTemplate} = require("./template");
-const {grabDirectives} = require("./directives");
+const { createLinesSummary, createDirectivesSummary } = require("./summary");
+const { parseTemplate } = require("./template");
+const { grabDirectives } = require("./directives");
 
 function writeToStatsFile(stats){
     const STATS_FILE_NAME = "./vpca-stats.log";
@@ -54,7 +54,7 @@ function processFile(file){
         const count = calculateLineCount(template);
         const directives = grabDirectives(template);
         const directivesCount = directives.length;
-        console.log(directives);
+        
         return{
             file,
             template,
