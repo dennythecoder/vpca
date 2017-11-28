@@ -6,7 +6,7 @@ const { parseTemplate } = require("./template");
 const { grabDirectives } = require("./directives");
 
 function writeToStatsFile(stats){
-    const STATS_FILE_NAME = "./vpca-stats.log";
+    const STATS_FILE_NAME = "./vpca-stats.json";
     try{
         unlinkSync(STATS_FILE_NAME);
     }catch(e){}
